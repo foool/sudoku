@@ -1,0 +1,247 @@
+$def with(name,jud)
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>
+$if name == "Welcome":
+		$name
+</title>
+<meta http-equiv="content-type" content="text/html; charset=gb2312">
+<style>
+.jcTable {
+	BORDER-RIGHT: #EEEEEE 3px solid; BORDER-LEFT: #EEEEEE 3px solid; 
+	BORDER-TOP: #EEEEEE 3px solid; BORDER-BOTTOM: #EEEEEE 3px solid; TABLE-LAYOUT: fixed; 
+	VERTICAL-ALIGN: middle; WIDTH: 378px; HEIGHT: 378px; 
+	BORDER-COLLAPSE: collapse; TEXT-ALIGN: center;
+	BACKGROUND: url('/static/white.png');
+}
+TR.grid {
+	HEIGHT: 42px
+}
+TD.normal {
+	BORDER-LEFT: 0px solid; BORDER-BOTTOM: 0px solid;
+	BORDER-RIGHT: 0px solid; BORDER-TOP: 0px solid; WIDTH: 42px; 
+	LINE-HEIGHT: 42px; HEIGHT: 42px; TEXT-ALIGN: center; COLOR: black; FONT-SIZE: 22pt
+}
+DIV.normal2 {
+	width: 42px;
+	height: 42px;
+	border: 0 0 0 0;
+	overflow: hidden;
+	float: left;
+}
+.w0 {
+	BORDER-RIGHT: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-BOTTOM: 0px; MARGIN: 0px; 
+	WIDTH: 42px; LINE-HEIGHT: 42px; FONT-FAMILY: lucida handwriting,comic sans ms,cursive; 
+	HEIGHT: 42px; TEXT-ALIGN: center; background-color:transparent; COLOR: black;FONT-SIZE: 22pt
+}
+.numbut {
+	width:80px;
+	height:80px;
+	float:left;
+	font-size: 36pt;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+<table id=maintab border=0 cellpadding=0 cellspacing=0>
+	<tr>
+		<td valign=top>
+<!-- img src=white.png id=img style="position:absolute" -->
+<form action="http://www.dullgull.com/sudoku/" method="post" id="post_new">
+<div id=mytigrid>
+<div class=jcTable id=tab borderColor=black cellSpacing=0 cellPadding=0  border=1>
+$if len(name) >= 81:
+	<div class=normal2><input class=w0 name="n00" size=2 id=f00 type=text value=$name[0]></div>
+	<div class=normal2><input class=w0 name="n01" size=2 id=f01 type=text value=$name[1]></div>
+	<div class=normal2><input class=w0 name="n02" size=2 id=f02 type=text value=$name[2]></div>
+	<div class=normal2><input class=w0 name="n03" size=2 id=f03 type=text value=$name[3]></div>
+	<div class=normal2><input class=w0 name="n04" size=2 id=f04 type=text value=$name[4]></div>
+	<div class=normal2><input class=w0 name="n05" size=2 id=f05 type=text value=$name[5]></div>
+	<div class=normal2><input class=w0 name="n06" size=2 id=f06 type=text value=$name[6]></div>
+	<div class=normal2><input class=w0 name="n07" size=2 id=f07 type=text value=$name[7]></div>
+	<div class=normal2><input class=w0 name="n08" size=2 id=f08 type=text value=$name[8]></div>
+	<div class=normal2><input class=w0 name="n09" size=2 id=f10 type=text value=$name[9]></div>
+	<div class=normal2><input class=w0 name="n10" size=2 id=f11 type=text value=$name[10]></div>
+	<div class=normal2><input class=w0 name="n11" size=2 id=f12 type=text value=$name[11]></div>
+	<div class=normal2><input class=w0 name="n12" size=2 id=f13 type=text value=$name[12]></div>
+	<div class=normal2><input class=w0 name="n13" size=2 id=f14 type=text value=$name[13]></div>
+	<div class=normal2><input class=w0 name="n14" size=2 id=f15 type=text value=$name[14]></div>
+	<div class=normal2><input class=w0 name="n15" size=2 id=f16 type=text value=$name[15]></div>
+	<div class=normal2><input class=w0 name="n16" size=2 id=f17 type=text value=$name[16]></div>
+	<div class=normal2><input class=w0 name="n17" size=2 id=f18 type=text value=$name[17]></div>
+	<div class=normal2><input class=w0 name="n18" size=2 id=f20 type=text value=$name[18]></div>
+	<div class=normal2><input class=w0 name="n19" size=2 id=f21 type=text value=$name[19]></div>
+	<div class=normal2><input class=w0 name="n20" size=2 id=f22 type=text value=$name[20]></div>
+	<div class=normal2><input class=w0 name="n21" size=2 id=f23 type=text value=$name[21]></div>
+	<div class=normal2><input class=w0 name="n22" size=2 id=f24 type=text value=$name[22]></div>
+	<div class=normal2><input class=w0 name="n23" size=2 id=f25 type=text value=$name[23]></div>
+	<div class=normal2><input class=w0 name="n24" size=2 id=f26 type=text value=$name[24]></div>
+	<div class=normal2><input class=w0 name="n25" size=2 id=f27 type=text value=$name[25]></div>
+	<div class=normal2><input class=w0 name="n26" size=2 id=f28 type=text value=$name[26]></div>
+	<div class=normal2><input class=w0 name="n27" size=2 id=f30 type=text value=$name[27]></div>
+	<div class=normal2><input class=w0 name="n28" size=2 id=f31 type=text value=$name[28]></div>
+	<div class=normal2><input class=w0 name="n29" size=2 id=f32 type=text value=$name[29]></div>
+	<div class=normal2><input class=w0 name="n30" size=2 id=f33 type=text value=$name[30]></div>
+	<div class=normal2><input class=w0 name="n31" size=2 id=f34 type=text value=$name[31]></div>
+	<div class=normal2><input class=w0 name="n32" size=2 id=f35 type=text value=$name[32]></div>
+	<div class=normal2><input class=w0 name="n33" size=2 id=f36 type=text value=$name[33]></div>
+	<div class=normal2><input class=w0 name="n34" size=2 id=f37 type=text value=$name[34]></div>
+	<div class=normal2><input class=w0 name="n35" size=2 id=f38 type=text value=$name[35]></div>
+	<div class=normal2><input class=w0 name="n36" size=2 id=f40 type=text value=$name[36]></div>
+	<div class=normal2><input class=w0 name="n37" size=2 id=f41 type=text value=$name[37]></div>
+	<div class=normal2><input class=w0 name="n38" size=2 id=f42 type=text value=$name[38]></div>
+	<div class=normal2><input class=w0 name="n39" size=2 id=f43 type=text value=$name[39]></div>
+	<div class=normal2><input class=w0 name="n40" size=2 id=f44 type=text value=$name[40]></div>
+	<div class=normal2><input class=w0 name="n41" size=2 id=f45 type=text value=$name[41]></div>
+	<div class=normal2><input class=w0 name="n42" size=2 id=f46 type=text value=$name[42]></div>
+	<div class=normal2><input class=w0 name="n43" size=2 id=f47 type=text value=$name[43]></div>
+	<div class=normal2><input class=w0 name="n44" size=2 id=f48 type=text value=$name[44]></div>
+	<div class=normal2><input class=w0 name="n45" size=2 id=f50 type=text value=$name[45]></div>
+	<div class=normal2><input class=w0 name="n46" size=2 id=f51 type=text value=$name[46]></div>
+	<div class=normal2><input class=w0 name="n47" size=2 id=f52 type=text value=$name[47]></div>
+	<div class=normal2><input class=w0 name="n48" size=2 id=f53 type=text value=$name[48]></div>
+	<div class=normal2><input class=w0 name="n49" size=2 id=f54 type=text value=$name[49]></div>
+	<div class=normal2><input class=w0 name="n50" size=2 id=f55 type=text value=$name[50]></div>
+	<div class=normal2><input class=w0 name="n51" size=2 id=f56 type=text value=$name[51]></div>
+	<div class=normal2><input class=w0 name="n52" size=2 id=f57 type=text value=$name[52]></div>
+	<div class=normal2><input class=w0 name="n53" size=2 id=f58 type=text value=$name[53]></div>
+	<div class=normal2><input class=w0 name="n54" size=2 id=f60 type=text value=$name[54]></div>
+	<div class=normal2><input class=w0 name="n55" size=2 id=f61 type=text value=$name[55]></div>
+	<div class=normal2><input class=w0 name="n56" size=2 id=f62 type=text value=$name[56]></div>
+	<div class=normal2><input class=w0 name="n57" size=2 id=f63 type=text value=$name[57]></div>
+	<div class=normal2><input class=w0 name="n58" size=2 id=f64 type=text value=$name[58]></div>
+	<div class=normal2><input class=w0 name="n59" size=2 id=f65 type=text value=$name[59]></div>
+	<div class=normal2><input class=w0 name="n60" size=2 id=f66 type=text value=$name[60]></div>
+	<div class=normal2><input class=w0 name="n61" size=2 id=f67 type=text value=$name[61]></div>
+	<div class=normal2><input class=w0 name="n62" size=2 id=f68 type=text value=$name[62]></div>
+	<div class=normal2><input class=w0 name="n63" size=2 id=f70 type=text value=$name[63]></div>
+	<div class=normal2><input class=w0 name="n64" size=2 id=f71 type=text value=$name[64]></div>
+	<div class=normal2><input class=w0 name="n65" size=2 id=f72 type=text value=$name[65]></div>
+	<div class=normal2><input class=w0 name="n66" size=2 id=f73 type=text value=$name[66]></div>
+	<div class=normal2><input class=w0 name="n67" size=2 id=f74 type=text value=$name[67]></div>
+	<div class=normal2><input class=w0 name="n68" size=2 id=f75 type=text value=$name[68]></div>
+	<div class=normal2><input class=w0 name="n69" size=2 id=f76 type=text value=$name[69]></div>
+	<div class=normal2><input class=w0 name="n70" size=2 id=f77 type=text value=$name[70]></div>
+	<div class=normal2><input class=w0 name="n71" size=2 id=f78 type=text value=$name[71]></div>
+	<div class=normal2><input class=w0 name="n72" size=2 id=f80 type=text value=$name[72]></div>
+	<div class=normal2><input class=w0 name="n73" size=2 id=f81 type=text value=$name[73]></div>
+	<div class=normal2><input class=w0 name="n74" size=2 id=f82 type=text value=$name[74]></div>
+	<div class=normal2><input class=w0 name="n75" size=2 id=f83 type=text value=$name[75]></div>
+	<div class=normal2><input class=w0 name="n76" size=2 id=f84 type=text value=$name[76]></div>
+	<div class=normal2><input class=w0 name="n77" size=2 id=f85 type=text value=$name[77]></div>
+	<div class=normal2><input class=w0 name="n78" size=2 id=f86 type=text value=$name[78]></div>
+	<div class=normal2><input class=w0 name="n79" size=2 id=f87 type=text value=$name[79]></div>
+	<div class=normal2><input class=w0 name="n80" size=2 id=f88 type=text value=$name[80]></div>
+$else:
+	<div class=normal2><input class=w0 name="n00" size=2 id=f00 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n01" size=2 id=f01 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n02" size=2 id=f02 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n03" size=2 id=f03 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n04" size=2 id=f04 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n05" size=2 id=f05 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n06" size=2 id=f06 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n07" size=2 id=f07 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n08" size=2 id=f08 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n09" size=2 id=f10 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n10" size=2 id=f11 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n11" size=2 id=f12 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n12" size=2 id=f13 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n13" size=2 id=f14 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n14" size=2 id=f15 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n15" size=2 id=f16 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n16" size=2 id=f17 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n17" size=2 id=f18 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n18" size=2 id=f20 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n19" size=2 id=f21 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n20" size=2 id=f22 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n21" size=2 id=f23 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n22" size=2 id=f24 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n23" size=2 id=f25 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n24" size=2 id=f26 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n25" size=2 id=f27 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n26" size=2 id=f28 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n27" size=2 id=f30 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n28" size=2 id=f31 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n29" size=2 id=f32 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n30" size=2 id=f33 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n31" size=2 id=f34 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n32" size=2 id=f35 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n33" size=2 id=f36 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n34" size=2 id=f37 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n35" size=2 id=f38 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n36" size=2 id=f40 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n37" size=2 id=f41 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n38" size=2 id=f42 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n39" size=2 id=f43 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n40" size=2 id=f44 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n41" size=2 id=f45 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n42" size=2 id=f46 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n43" size=2 id=f47 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n44" size=2 id=f48 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n45" size=2 id=f50 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n46" size=2 id=f51 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n47" size=2 id=f52 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n48" size=2 id=f53 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n49" size=2 id=f54 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n50" size=2 id=f55 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n51" size=2 id=f56 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n52" size=2 id=f57 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n53" size=2 id=f58 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n54" size=2 id=f60 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n55" size=2 id=f61 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n56" size=2 id=f62 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n57" size=2 id=f63 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n58" size=2 id=f64 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n59" size=2 id=f65 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n60" size=2 id=f66 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n61" size=2 id=f67 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n62" size=2 id=f68 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n63" size=2 id=f70 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n64" size=2 id=f71 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n65" size=2 id=f72 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n66" size=2 id=f73 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n67" size=2 id=f74 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n68" size=2 id=f75 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n69" size=2 id=f76 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n70" size=2 id=f77 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n71" size=2 id=f78 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n72" size=2 id=f80 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n73" size=2 id=f81 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n74" size=2 id=f82 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n75" size=2 id=f83 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n76" size=2 id=f84 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n77" size=2 id=f85 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n78" size=2 id=f86 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n79" size=2 id=f87 type=text value=''></div>
+	<div class=normal2><input class=w0 name="n80" size=2 id=f88 type=text value=''></div>
+</div>
+</div>
+<p><input type="submit" class="submit" value="compute" /></p>
+</form>
+		</td>
+		<td valign=top>
+<form action="http://www.dullgull.com/sudoku/set" method="post" id="set_value">
+$if len(name) >= 81:
+	<textarea id=myti cols=18 name="textarea" rows=12>$name[0:81]</textarea><br>
+$else:
+	<textarea id=myti cols=18 name="textarea" rows=12>000000000000000000000000000000000000000000000000000000000000000000000000000000000</textarea><br>
+<input type="submit" class="submit" value="set value" >
+<h3>A example:</h3> 020000080568179234090000010030040050040205090070080040050000060289634175010000020
+<br>
+$if jud == 1:
+	<h1>Solved!</h1>
+</form>			
+			</td>   
+	</tr>
+</table>
+
+<script src="http://s20.cnzz.com/stat.php?id=3976418&web_id=3976418&show=pic1" language="JavaScript"></script>
+</body>
+</html>
