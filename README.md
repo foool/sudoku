@@ -2,7 +2,7 @@ A simple web page for solving sudoku problems
 ---------------------------------------------
 
 * environment: XAMPP + python + wsgi_mod + web.py
-* [.An example](http://www.dullgull.com/sudoku)
+* [.A demonstration](http://sudor.sinaapp.com/)
 
 Add following configuration to you apache configuration:
 
